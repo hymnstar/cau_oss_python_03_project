@@ -74,6 +74,14 @@ def start_process(path):
             print(keywords)
             keyword = input('type keyword:')
 
+            # 키워드가 유효한가?
+            if keyword in keywords:
+                # 유효한 경우
+                spots = parking_spot_manager.sort_by_keyword(spots, keyword)
+            else:
+                # 잘못된 모임
+                print("invalid input")
+
         elif select == 4:
             # 프로그램 종료
             print("Exit")
@@ -82,4 +90,16 @@ def start_process(path):
         else:
             # 잘못된 입력
             print("invalid input")
+
+
+
+
+
+
+
+
+
+
+
+
 

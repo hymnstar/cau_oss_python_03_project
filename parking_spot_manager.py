@@ -1,3 +1,8 @@
+def sort_by_keyword(spots, keyword):
+    # 주어진 키워드로 리스트를 정렬함
+    return sorted(spots, key=lambda spot: spot.get(keyword))
+
+
 class parking_spot:
     # 주차장 초기화
     def __init__(self, name, city, district, ptype, longitude, latitude):
@@ -68,9 +73,9 @@ if __name__ == '__main__':
     spots = filter_by_district(spots, '동작')
     print_spots(spots)
 
-    # version#4
-    # spots = sort_by_keyword(spots, 'name')
-    # print_spots(spots)
+    #version#4
+    spots = sort_by_keyword(spots, 'name')
+    print_spots(spots)
 
 
 
